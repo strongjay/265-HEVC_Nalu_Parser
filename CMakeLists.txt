@@ -25,7 +25,10 @@ link_directories(${AVUTIL_LIBRARY_DIRS})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # 添加源文件
-add_executable(parse_hevc_nalu src/demo.cpp)
+add_executable(parse_hevc_nalu 
+src/demo.cpp
+src/RTPSender.h
+)
 
 # 链接 FFmpeg 库
 link_directories(/usr/lib/x86_64-linux-gnu)
